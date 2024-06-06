@@ -7,9 +7,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #080808;
-  background-image: url(assets/img/grain.jpg);
-  background-size: auto;
-  background-repeat: round;
 }
 
 .root-logo {
@@ -24,12 +21,40 @@ body {
   margin: 0 auto;
 }
 
+.root-body {
+  background-image: url(assets/img/grain.jpg);
+  background-size: auto;
+  background-repeat: round;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  transition: padding 0.5s ease-in-out; /* Adjusted timing and added easing */
+}
+
 .root-body h1 {
   padding-top: 90px;
   text-align: center;
   color: #eb3022;
   font-family: "splash", sans-serif;
   line-height: 1.5;
+}
+.header-title {
+  margin: 0;
+  transition: font-size 0.5s ease-in-out; /* Adjusted timing and added easing */
+}
+
+.header.shrink {
+  padding: 10px 0;
+  font-size: 10px;
+}
+
+.header.shrink .header-title {
+  font-size: 5em;
 }
 
 /*Header component*/
@@ -45,4 +70,15 @@ body {
   width: 120px;
   display: block;
   margin: 0 auto;
+}
+
+.albums-body {
+  color: #eb3022;
+}
+
+.albums-body h2 {
+  padding: 20px;
+  font-family: "libre-bodoni";
+  font-weight: 400;
+  font-style: normal;
 }

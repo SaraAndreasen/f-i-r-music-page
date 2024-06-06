@@ -1,13 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #080808;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  background-image: url(assets/img/grain.jpg);
+  background-size: auto;
+  background-repeat: round;
 }
 
 .root-logo {
@@ -27,9 +29,7 @@ code {
   text-align: center;
   color: #eb3022;
   font-family: "splash", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 110px;
+  line-height: 1.5;
 }
 
 /*Header component*/

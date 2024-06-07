@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Header } from "../components/Header.tsx";
+import { Header } from "../components/Header";
 import ronnieRedStripe from "../assets/img/ronnie-1.jpg";
-import { Albums } from "../components/Albums.tsx";
+import { Albums } from "../components/Albums";
 export function Root() {
   const [fontSize, setFontSize] = useState<number>(7.5); // Initial font size in em
 

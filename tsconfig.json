@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "react",
+    "outDir": "./dist"
+  },
+  "include": [
+    "src/**/*", // Include all files in src directory
+    "images.d.ts", // Explicitly include the image type declaration file
+    "assets/**/*" // Include assets directory if needed
+  ],
+  "exclude": ["node_modules"]
+}

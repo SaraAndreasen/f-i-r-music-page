@@ -3,12 +3,12 @@ import { Header } from "../components/Header.tsx";
 import ronnieRedStripe from "../assets/img/ronnie-1.jpg";
 import { Albums } from "../components/Albums.tsx";
 export function Root() {
-  const [fontSize, setFontSize] = useState<number>(8.5); // Initial font size in em
+  const [fontSize, setFontSize] = useState<number>(7.5); // Initial font size in em
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const newFontSize = Math.max(4, 8.5 - scrollY / 100); // Adjust the divisor to control the rate of shrinking
+      const newFontSize = Math.max(4, 7.5 - scrollY / 100); // Adjust the divisor to control the rate of shrinking
 
       setFontSize(newFontSize);
     };
@@ -18,15 +18,6 @@ export function Root() {
     };
   }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      console.log("Window width:", window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <>
       <Header />
@@ -46,6 +37,7 @@ export function Root() {
           className="root-ronnie1"
         />
       </div>
+      <div className="content-break"></div>
       <div>
         <Albums />
       </div>

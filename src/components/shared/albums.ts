@@ -8,6 +8,7 @@ export interface AlbumsInterface {
   id: number;
   title: string;
   albumCover: string;
+  link: string;
 }
 
 export const albums: AlbumsInterface[] = [
@@ -15,9 +16,20 @@ export const albums: AlbumsInterface[] = [
     id: 0,
     title: "Voices In My Head",
     albumCover: VoicesInMyHead,
+    link: "",
   },
-  { id: 1, title: "Popular Monster", albumCover: PopularMonster },
-  { id: 2, title: "Drugs", albumCover: Drugs },
-  { id: 3, title: "Last Resort (Reimagined)", albumCover: LastResort },
-  { id: 4, title: "Coming Home (Deluxe Edition)", albumCover: ComingHome },
+  { id: 1, title: "Popular Monster", albumCover: PopularMonster, link: "" },
+  { id: 2, title: "Drugs", albumCover: Drugs, link: "" },
+  {
+    id: 3,
+    title: "Last Resort (Reimagined)",
+    albumCover: LastResort,
+    link: "",
+  },
+  {
+    id: 4,
+    title: "Coming Home (Deluxe Edition)",
+    albumCover: ComingHome,
+    link: "",
+  },
 ];

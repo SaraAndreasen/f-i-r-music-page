@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Header } from "../components/Header";
 import ronnieRedStripe from "../assets/img/ronnie-1.jpg";
-import { Albums } from "../components/Albums";
+import { Albums } from "../components/AlbumContainer";
+
 export function Root() {
   const [fontSize, setFontSize] = useState<number>(7.5); // Initial font size in em
 
@@ -30,7 +31,6 @@ export function Root() {
             Falling in Reverse
           </h1>
         </header>
-
         <img
           src={ronnieRedStripe}
           alt="Ronnie with red stripe"

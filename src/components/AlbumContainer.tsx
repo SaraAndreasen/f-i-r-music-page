@@ -5,16 +5,23 @@ import Drugs from "../assets/img/album-3.jpg";
 import LastResort from "../assets/img/album-4.jpg";
 import ComingHome from "../assets/img/album-5.jpg";
 
+interface AlbumsInterface {
+  id: number;
+  title: string;
+  albumCover: string;
+}
+
 export function Albums() {
-  const albums = [
+  const albums: AlbumsInterface[] = [
     {
+      id: 0,
       title: "Voices In My Head",
       albumCover: VoicesInMyHead,
     },
-    { title: "Popular Monster", albumCover: PopularMonster },
-    { title: "Drugs", albumCover: Drugs },
-    { title: "Last Resort (Reimagined)", albumCover: LastResort },
-    { title: "Coming Home (Deluxe Edition)", albumCover: ComingHome },
+    { id: 1, title: "Popular Monster", albumCover: PopularMonster },
+    { id: 2, title: "Drugs", albumCover: Drugs },
+    { id: 3, title: "Last Resort (Reimagined)", albumCover: LastResort },
+    { id: 4, title: "Coming Home (Deluxe Edition)", albumCover: ComingHome },
   ];
 
   console.log(albums[1]);

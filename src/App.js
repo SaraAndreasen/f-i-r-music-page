@@ -12,7 +12,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/album",
+    path: "/album/:link",
     element: <SelectedAlbum />,
     errorElement: <ErrorPage />,
   },

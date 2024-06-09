@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/img/logo.png";
 import { SlideBar } from "./SlideBar";
+import { Link } from "react-router-dom";
 
 export function Header() {
   return (
@@ -10,7 +11,9 @@ export function Header() {
         aria-label="Global"
       >
         <div className="flex">
-          <img src={logo} alt="Falling in Reverse logo" />
+          <Link to={"/"}>
+            <img src={logo} alt="Falling in Reverse logo" />
+          </Link>
         </div>
         <SlideBar />
       </nav>

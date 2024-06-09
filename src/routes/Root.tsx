@@ -1,7 +1,7 @@
 import React from "react";
 import { Header } from "../components/components/Header";
-import { Albums } from "../components/components/AlbumContainer";
 import { HeroBanner } from "../components/components/HeroBanner";
+import { AlbumWrapper } from "../components/components/AlbumWrapper";
 
 export function Root() {
   return (
@@ -9,7 +9,7 @@ export function Root() {
       <Header />
       <HeroBanner />
       <div className="content-break"></div>
-      <Albums />
+      <AlbumWrapper />
     </>
   );
 }

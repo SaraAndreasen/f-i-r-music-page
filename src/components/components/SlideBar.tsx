@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { albums, AlbumsInterface } from "../shared/albums";
+import { Link } from "react-router-dom";
 
 export function SlideBar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -59,17 +60,27 @@ export function SlideBar() {
             <FontAwesomeIcon icon={faXmark} className="text-black" />
           </div>
 
-          <ul
-            className={`text-2xl sm:text-3xl flex flex-col items-center justify-center h-full transition-opacity duration-100 ${
-              showContent ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            {albums.map((album: AlbumsInterface) => (
-              <li className="p-2 text-black">
-                <a href={album.link}>{album.title}</a>
-              </li>
-            ))}
-          </ul>
+          {albums.length === 0 ? (
+            <div
+              className={`text-2xl sm:text-3xl flex flex-col items-center justify-center h-full transition-opacity duration-100 ${
+                showContent ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <p className="text-white">No albums found</p>
+            </div>
+          ) : (
+            <ul
+              className={`text-2xl sm:text-3xl flex flex-col items-center justify-center h-full transition-opacity duration-100 ${
+                showContent ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              {albums.map((album: AlbumsInterface) => (
+                <li key={album.id} className="p-2 text-black">
+                  <Link to={`/album/${album.link}`}>{album.title}</Link>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     </>

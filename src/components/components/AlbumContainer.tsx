@@ -1,20 +1,27 @@
 import React from "react";
-import { albums, AlbumsInterface } from "../shared/albums";
+import { albums } from "../shared/albums";
+import { useParams } from "react-router-dom";
 
 export function Albums() {
+  const { link } = useParams<{ link: string }>();
+  const album = albums.find((album) => album.link === link);
+
   return (
     <div className="albums-body">
-      <h2 className="text-4xl sm:text-5xl text-center leading-normal">
-        Albums
-      </h2>
-      <ul>
-        {albums.map((album: AlbumsInterface) => (
-          <li key={album.id} className="justify-center">
-            <img src={album.albumCover} alt={album.title} />
-            <p className="text-xl">{album.title}</p>
-          </li>
-        ))}
-      </ul>
+      {albums.length === 0 ? (
+        <div className={"albums-body"}>
+          <h2 className="text-4xl sm:text-5xl text-center leading-normal">
+            No albums found
+          </h2>
+        </div>
+      ) : (
+        <div>
+          <h1 className="text-4xl sm:text-5xl text-center leading-normal">
+            {album?.title}
+          </h1>
+          <img src={album?.albumCover} alt={album?.title} />
+        </div>
+      )}
     </div>
   );
 }

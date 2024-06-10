@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/f-i-r-music-page/static/css/main.23a29c19.css",
+    "main.js": "/f-i-r-music-page/static/js/main.885e70f9.js",
+    "static/media/album-3.jpg": "/f-i-r-music-page/static/media/album-3.66a5695472bfd3969a82.jpg",
+    "static/media/album-4.jpg": "/f-i-r-music-page/static/media/album-4.b9727fe1440bae17fc51.jpg",
+    "static/media/album-1.jpg": "/f-i-r-music-page/static/media/album-1.1e06a81d102bee451ebe.jpg",
+    "static/media/album-2.jpg": "/f-i-r-music-page/static/media/album-2.ea7f28c12cc9f69e890d.jpg",
+    "static/media/album-5.jpg": "/f-i-r-music-page/static/media/album-5.95a966f142d36540daa1.jpg",
+    "static/media/ronnie-1.jpg": "/f-i-r-music-page/static/media/ronnie-1.fd7fc8c9c3d98f230680.jpg",
+    "static/media/logo.png": "/f-i-r-music-page/static/media/logo.16412860d474966fff93.png",
+    "index.html": "/f-i-r-music-page/index.html",
+    "main.23a29c19.css.map": "/f-i-r-music-page/static/css/main.23a29c19.css.map",
+    "main.885e70f9.js.map": "/f-i-r-music-page/static/js/main.885e70f9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.23a29c19.css",
+    "static/js/main.885e70f9.js"
+  ]
+}

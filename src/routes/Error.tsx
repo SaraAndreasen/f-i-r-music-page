@@ -19,7 +19,7 @@ export default function ErrorPage() {
   }
 
   return (
-    <div id="error-page">
+    <div id="error-page" className="mt-36 text-center text-white text-4xl">
       <h1>Oops!</h1>
       <p>Sorry, an unexpected error has occurred.</p>
       <p>

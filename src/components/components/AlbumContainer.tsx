@@ -1,10 +1,25 @@
 import React from "react";
 import { albums } from "../shared/albums";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 export function Albums() {
   const { link } = useParams<{ link: string }>();
   const album = albums.find((album) => album.link === link);
+
+  if (!album) {
+    // Render a not found message or redirect to a generic error page
+    return (
+      <div className="mt-36 text-center">
+        <h2 className="text-4xl">Album Not Found</h2>
+        <p className="text-white">
+          Sorry, we couldn't find the album you're looking for.
+        </p>
+        <Link to="/" className="text-white">
+          Go back to home page
+        </Link>
+      </div>
+    );
+  }
 
   // Function to transform YouTube watch URL to embed URL
   const getEmbedUrl = (url: string) => {

@@ -76,7 +76,9 @@ export function SlideBar() {
             >
               {albums.map((album: AlbumsInterface) => (
                 <li key={album.id} className="p-2 text-black">
-                  <Link to={`/album/${album.link}`}>{album.title}</Link>
+                  <Link to={`/album/${album.link}`} onClick={exitNav}>
+                    {album.title}
+                  </Link>
                 </li>
               ))}
             </ul>
